@@ -1,21 +1,24 @@
-harnessAssessment
+# HarnessAssessment
 
-This is a Python based web application which uses DRF to create APIs as per the requirement of harness assessment.
+This is a Python-based web application which uses Django Rest Framework (DRF) to create APIs as per the requirement of harness assessment.
 
-To install necessary dependencies 
-use the following command
-pip install requirements.txt
+## Installation
+To install the necessary dependencies, use the following command:
 
-To create the databases and required tables in the application
-use the following commands
+```shell
+pip install -r requirements.txt
+```
+## Database Setup
+To create the databases and required tables in the application, use the following commands:
+
+```shell
 python manage.py makemigrations
-python manage.py makemigrate
+python manage.py migrate
+```
+## Running the Application
+To run the application, use the following command:
 
-To run the application 
-use the following command
+```shell
 python manage.py runserver
-
-To test the application 
-use the following command
-python manage.py test api.tests
-The application is also integrated with CI to run the test cases.
+```
+The application is also integrated with continuous integration (CI) to run the test cases.
