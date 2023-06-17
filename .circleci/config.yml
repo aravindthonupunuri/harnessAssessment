@@ -14,15 +14,19 @@ jobs:
           command: pip install -r requirements.txt
       - run:
           name: Make migrations
-          command: python manage.py makemigrations
-          
+          command: python manage.py makemigrations --settings=harnessAssesment.settings
+
       - run:
           name: Set up test database
-          command: python manage.py migrate
+          command: python manage.py migrate --settings=harnessAssesment.settings
+
+#     - run:
+          # name: Set up test database
+          # command: python manage.py migrate --settings=myproject.settings_test
 
       - run:
           name: Run tests
-          command: python manage.py test api.tests
+          command: python manage.py test api.tests --settings=harnessAssesment.tests
 
 workflows:
   version: 2
