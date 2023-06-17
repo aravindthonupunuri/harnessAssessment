@@ -15,11 +15,11 @@ jobs:
 
       - run:
           name: Set up test database
-          command: python manage.py migrate --settings=harnessassesment.settings.test
+          command: python manage.py migrate
 
       - run:
           name: Run tests
-          command: python manage.py test api.tests --settings=harnessassesment.settings.test
+          command: python manage.py test api.tests
 
 workflows:
   version: 2
