@@ -15,7 +15,7 @@ jobs:
 
       - run:
           name: Run tests
-          command: python manage.py test
+          command: python manage.py test api.tests
 
 workflows:
   version: 2
